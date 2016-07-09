@@ -1,0 +1,9 @@
+.DS_Store
+UserInterfaceState.xcuserstate
+
+# Exclude personal Xcode user settings
+xcuserdata/
+
+# Pods
+Pods/
+Podfile.lock

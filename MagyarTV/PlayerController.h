@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PlayerController.h
 //  MagyarTV
 //
 //  Created by GK on 2016.07.09..
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@import AVKit;
 
+@interface PlayerController : AVPlayerViewController
 
 @end
-
