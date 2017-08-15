@@ -1,6 +1,12 @@
 # MagyarTV
 
-Csináld magad magyar TV csatornák Apple TV 4-re!
+Csináld magad magyar TV csatornák Apple TV 4-re ingyen!
+
+* M1
+* M2
+* M4 Sport
+* Duna TV
+* Duna World
 
 ![Menü](Doc/1.png)
 ![Belső képernyő](Doc/2.png)
