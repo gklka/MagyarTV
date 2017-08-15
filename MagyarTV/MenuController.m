@@ -130,7 +130,7 @@ static NSString * const reuseIdentifier = @"Cell";
                     NSString *unescapedString = [urlSplit[0] stringByReplacingOccurrencesOfString:@"\\" withString:@""];
                     NSString *secureString = [unescapedString stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
                     
-                    NSURL *liveStreamURL = [NSURL URLWithString:secureString];
+                    NSURL *liveStreamURL = [NSURL URLWithString:secureString]; 
                     if (liveStreamURL) {
                         NSLog(@"URL: %@", liveStreamURL);
                         
