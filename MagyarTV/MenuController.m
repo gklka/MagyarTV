@@ -96,7 +96,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - Helper
 
 - (NSURL *)urlForChannel:(NSString *)channelName {
-    NSString *urlString = [NSString stringWithFormat:@"http://player.mediaklikk.hu/player/player-inside-full3.php?userid=mtva&streamid=%@live&flashmajor=22&flashminor=0&hls=1", channelName];
+    NSString *urlString = [NSString stringWithFormat:@"http://player.mediaklikk.hu/player/player-inside-full3.php?userid=mtva&streamid=%@live&noflash=yes", channelName];
     return [NSURL URLWithString:urlString];
 }
 
@@ -121,13 +121,16 @@ static NSString * const reuseIdentifier = @"Cell";
         if (htmlData) {
             NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
             
-            NSArray *sourceTagSplit = [html componentsSeparatedByString:@"<source src='"];
+            NSArray *sourceTagSplit = [html componentsSeparatedByString:@"\"playlist\":[{\"file\":\""];
             if (sourceTagSplit.count == 2) {
                 
-                NSArray *urlSplit = [sourceTagSplit[1] componentsSeparatedByString:@"'>"];
+                NSArray *urlSplit = [sourceTagSplit[1] componentsSeparatedByString:@"\"}]});"];
                 if (urlSplit.count > 1) {
                     
-                    NSURL *liveStreamURL = [NSURL URLWithString:urlSplit[0]];
+                    NSString *unescapedString = [urlSplit[0] stringByReplacingOccurrencesOfString:@"\\" withString:@""];
+                    NSString *secureString = [unescapedString stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
+                    
+                    NSURL *liveStreamURL = [NSURL URLWithString:secureString];
                     if (liveStreamURL) {
                         NSLog(@"URL: %@", liveStreamURL);
                         
