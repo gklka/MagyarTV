@@ -96,7 +96,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - Helper
 
 - (NSURL *)urlForChannel:(NSString *)channelName {
-    NSString *urlString = [NSString stringWithFormat:@"http://player.mediaklikk.hu/player/player-inside-full3.php?userid=mtva&streamid=%@live&noflash=yes", channelName];
+    NSString *urlString = [NSString stringWithFormat:@"https://player.mediaklikk.hu/playernew/player.php?video=%@live&noflash=yes&osfamily=iOS&osversion=11.0&browsername=Safari&browserversion=11.0&title=%@&conteintid=%@live&embedded=0", channelName, channelName, channelName];
     return [NSURL URLWithString:urlString];
 }
 
@@ -121,28 +121,45 @@ static NSString * const reuseIdentifier = @"Cell";
         if (htmlData) {
             NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
             
-            NSArray *sourceTagSplit = [html componentsSeparatedByString:@"\"playlist\":[{\"file\":\""];
-            if (sourceTagSplit.count == 2) {
+            NSLog(@"HTML: %@", html);
+            
+            NSArray *sourceTagSplit = [html componentsSeparatedByString:@"\"playlist\":"];
+            if (sourceTagSplit.count > 1) {
                 
-                NSArray *urlSplit = [sourceTagSplit[1] componentsSeparatedByString:@"\"}]});"];
-                if (urlSplit.count > 1) {
+                NSArray *fileTagSplit = [sourceTagSplit[1] componentsSeparatedByString:@"\"file\": \""];
+                if (fileTagSplit.count > 1) {
                     
-                    NSString *unescapedString = [urlSplit[0] stringByReplacingOccurrencesOfString:@"\\" withString:@""];
-                    NSString *secureString = [unescapedString stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
-                    
-                    NSURL *liveStreamURL = [NSURL URLWithString:secureString]; 
-                    if (liveStreamURL) {
-                        NSLog(@"URL: %@", liveStreamURL);
+                    NSLog(@"%@", fileTagSplit[1]);
+                
+                    NSArray *urlSplit = [fileTagSplit[1] componentsSeparatedByString:@"\",\n"];
+                    if (urlSplit.count > 1) {
                         
-                        [self performSegueWithIdentifier:@"Show Channel" sender:liveStreamURL];
+                        NSLog(@"URL before transforming: %@", urlSplit[0]);
                         
+                        NSString *unescapedString = [urlSplit[0] stringByReplacingOccurrencesOfString:@"\\" withString:@""];
+                        NSString *secureString = [NSString stringWithFormat:@"https:%@", unescapedString];
+                        
+                        NSURL *liveStreamURL = [NSURL URLWithString:secureString];
+                        if (liveStreamURL) {
+                            NSLog(@"URL: %@", liveStreamURL);
+                            
+                            [self performSegueWithIdentifier:@"Show Channel" sender:liveStreamURL];
+                            
+                        } else {
+                            [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Nem található a csatorna URL-je)"];
+                        }
                     } else {
-                        [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Nem található a csatorna URL-je)"];
+                        [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 03)"];
+                        NSLog(@"count: %@, urlSplit: %@", @(urlSplit.count), urlSplit);
                     }
+                } else {
+                    [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 02)"];
+                    NSLog(@"count: %@, fileTagSplit: %@", @(fileTagSplit.count), fileTagSplit);
                 }
                 
             } else {
-                [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML)"];
+                [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 01)"];
+                NSLog(@"count: %@, sourceTagSplit: %@", @(sourceTagSplit.count), sourceTagSplit);
             }
             
             

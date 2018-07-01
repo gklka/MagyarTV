@@ -14,10 +14,30 @@
 		470B39E31D317D2C00613934 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E21D317D2C00613934 /* MenuController.m */; };
 		470B39E61D317E2800613934 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E51D317E2800613934 /* MenuCell.m */; };
 		470B39E91D319B3500613934 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E81D319B3500613934 /* PlayerController.m */; };
+		473D1EC61F85275A00099580 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 473D1EC51F85275A00099580 /* AppDelegate.m */; };
+		473D1EC91F85275A00099580 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 473D1EC81F85275A00099580 /* MasterViewController.m */; };
+		473D1ECC1F85275A00099580 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 473D1ECB1F85275A00099580 /* DetailViewController.m */; };
+		473D1ECF1F85275A00099580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473D1ECD1F85275A00099580 /* Main.storyboard */; };
+		473D1ED11F85275A00099580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473D1ED01F85275A00099580 /* Assets.xcassets */; };
+		473D1ED41F85275A00099580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473D1ED21F85275A00099580 /* LaunchScreen.storyboard */; };
+		473D1ED71F85275A00099580 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 473D1ED61F85275A00099580 /* main.m */; };
 		47AF269E1F42D5BB002F0350 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 47AF269D1F42D5BB002F0350 /* README.md */; };
 		47AF26A01F42D5C0002F0350 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 47AF269F1F42D5C0002F0350 /* LICENSE */; };
 		7A06139A540BD49FCC1974A6 /* Pods_MagyarTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3368CE1239566E5E06BD6959 /* Pods_MagyarTV.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		473D1F051F85277F00099580 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3368CE1239566E5E06BD6959 /* Pods_MagyarTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagyarTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +54,18 @@
 		470B39E51D317E2800613934 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
 		470B39E71D319B3500613934 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerController.h; sourceTree = "<group>"; };
 		470B39E81D319B3500613934 /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerController.m; sourceTree = "<group>"; };
+		473D1EC21F85275A00099580 /* MagyarTVMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagyarTVMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		473D1EC41F85275A00099580 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		473D1EC51F85275A00099580 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		473D1EC71F85275A00099580 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		473D1EC81F85275A00099580 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		473D1ECA1F85275A00099580 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		473D1ECB1F85275A00099580 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		473D1ECE1F85275A00099580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		473D1ED01F85275A00099580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		473D1ED31F85275A00099580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		473D1ED51F85275A00099580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		473D1ED61F85275A00099580 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		47AF269D1F42D5BB002F0350 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		47AF269F1F42D5C0002F0350 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6A17137156EEC87894EF611D /* Pods-MagyarTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTV/Pods-MagyarTV.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +78,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A06139A540BD49FCC1974A6 /* Pods_MagyarTV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		473D1EBF1F85275A00099580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +105,7 @@
 				47AF269D1F42D5BB002F0350 /* README.md */,
 				47AF269F1F42D5C0002F0350 /* LICENSE */,
 				470B39CC1D3179D400613934 /* MagyarTV */,
+				473D1EC31F85275A00099580 /* MagyarTVMobile */,
 				470B39CB1D3179D400613934 /* Products */,
 				7ADF54B01FB30E6F784D4E4F /* Pods */,
 				024AA9A91E968EAE06C7DD8D /* Frameworks */,
@@ -76,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				470B39CA1D3179D400613934 /* MagyarTV.app */,
+				473D1EC21F85275A00099580 /* MagyarTVMobile.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +146,24 @@
 				470B39CE1D3179D400613934 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		473D1EC31F85275A00099580 /* MagyarTVMobile */ = {
+			isa = PBXGroup;
+			children = (
+				473D1EC41F85275A00099580 /* AppDelegate.h */,
+				473D1EC51F85275A00099580 /* AppDelegate.m */,
+				473D1EC71F85275A00099580 /* MasterViewController.h */,
+				473D1EC81F85275A00099580 /* MasterViewController.m */,
+				473D1ECA1F85275A00099580 /* DetailViewController.h */,
+				473D1ECB1F85275A00099580 /* DetailViewController.m */,
+				473D1ECD1F85275A00099580 /* Main.storyboard */,
+				473D1ED01F85275A00099580 /* Assets.xcassets */,
+				473D1ED21F85275A00099580 /* LaunchScreen.storyboard */,
+				473D1ED51F85275A00099580 /* Info.plist */,
+				473D1ED61F85275A00099580 /* main.m */,
+			);
+			path = MagyarTVMobile;
 			sourceTree = "<group>";
 		};
 		7ADF54B01FB30E6F784D4E4F /* Pods */ = {
@@ -139,6 +198,24 @@
 			productReference = 470B39CA1D3179D400613934 /* MagyarTV.app */;
 			productType = "com.apple.product-type.application";
 		};
+		473D1EC11F85275A00099580 /* MagyarTVMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 473D1EDA1F85275A00099580 /* Build configuration list for PBXNativeTarget "MagyarTVMobile" */;
+			buildPhases = (
+				473D1EBE1F85275A00099580 /* Sources */,
+				473D1EBF1F85275A00099580 /* Frameworks */,
+				473D1EC01F85275A00099580 /* Resources */,
+				473D1F051F85277F00099580 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagyarTVMobile;
+			productName = MagyarTVMobile;
+			productReference = 473D1EC21F85275A00099580 /* MagyarTVMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -151,6 +228,11 @@
 					470B39C91D3179D400613934 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8Q4H6L9URL;
+					};
+					473D1EC11F85275A00099580 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 9L2H2A796T;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -168,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				470B39C91D3179D400613934 /* MagyarTV */,
+				473D1EC11F85275A00099580 /* MagyarTVMobile */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +263,16 @@
 				47AF26A01F42D5C0002F0350 /* LICENSE in Resources */,
 				470B39DA1D3179D400613934 /* Assets.xcassets in Resources */,
 				470B39D81D3179D400613934 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		473D1EC01F85275A00099580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				473D1ED41F85275A00099580 /* LaunchScreen.storyboard in Resources */,
+				473D1ED11F85275A00099580 /* Assets.xcassets in Resources */,
+				473D1ECF1F85275A00099580 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +340,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		473D1EBE1F85275A00099580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				473D1EC91F85275A00099580 /* MasterViewController.m in Sources */,
+				473D1EC61F85275A00099580 /* AppDelegate.m in Sources */,
+				473D1ED71F85275A00099580 /* main.m in Sources */,
+				473D1ECC1F85275A00099580 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -256,6 +360,22 @@
 				470B39D71D3179D400613934 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		473D1ECD1F85275A00099580 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				473D1ECE1F85275A00099580 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		473D1ED21F85275A00099580 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				473D1ED31F85275A00099580 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -350,6 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8Q4H6L9URL;
 				INFOPLIST_FILE = MagyarTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTV;
@@ -364,10 +485,71 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8Q4H6L9URL;
 				INFOPLIST_FILE = MagyarTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		473D1ED81F85275A00099580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9L2H2A796T;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MagyarTVMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTVMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		473D1ED91F85275A00099580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9L2H2A796T;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MagyarTVMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTVMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -388,6 +570,15 @@
 			buildConfigurations = (
 				470B39DF1D3179D400613934 /* Debug */,
 				470B39E01D3179D400613934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		473D1EDA1F85275A00099580 /* Build configuration list for PBXNativeTarget "MagyarTVMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				473D1ED81F85275A00099580 /* Debug */,
+				473D1ED91F85275A00099580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
