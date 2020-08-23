@@ -143,7 +143,9 @@ static NSString * const reuseIdentifier = @"Cell";
                         if (liveStreamURL) {
                             NSLog(@"URL: %@", liveStreamURL);
                             
-                            [self performSegueWithIdentifier:@"Show Channel" sender:liveStreamURL];
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [self performSegueWithIdentifier:@"Show Channel" sender:liveStreamURL];
+                            });
                             
                         } else {
                             [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Nem található a csatorna URL-je)"];
