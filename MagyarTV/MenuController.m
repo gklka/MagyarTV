@@ -97,7 +97,9 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - <AVPlayerViewControllerDelegate>
 
 - (void)playerViewController:(AVPlayerViewController *)playerViewController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^)(BOOL))completionHandler {
-    [self presentViewController:playerViewController animated:NO completion:nil];
+    if (self.presentedViewController == nil) {
+        [self presentViewController:playerViewController animated:NO completion:nil];
+    }
 }
 
 #pragma mark - Helper
