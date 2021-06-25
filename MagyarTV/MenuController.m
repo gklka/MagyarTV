@@ -13,7 +13,7 @@
 @import SVProgressHUD;
 @import AVKit;
 
-@interface MenuController ()
+@interface MenuController () <AVPlayerViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray<UIImage *> *logos;
 @property (nonatomic, strong) NSArray<NSString *> *channelNames;
@@ -36,6 +36,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"Show Channel"]) {
         PlayerController *controller = (PlayerController *)segue.destinationViewController;
+        controller.delegate = self;
         NSURL *liveStreamURL = (NSURL *)sender;
         controller.player = [AVPlayer playerWithURL:liveStreamURL];
     }
@@ -93,6 +94,12 @@ static NSString * const reuseIdentifier = @"Cell";
     [self openLiveStreamForChannel:[self.channelNames objectAtIndex:indexPath.item]];
 }
 
+#pragma mark - <AVPlayerViewControllerDelegate>
+
+- (void)playerViewController:(AVPlayerViewController *)playerViewController restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(void (^)(BOOL))completionHandler {
+    [self presentViewController:playerViewController animated:NO completion:nil];
+}
+
 #pragma mark - Helper
 
 - (NSURL *)urlForChannel:(NSString *)channelName {
@@ -114,7 +121,8 @@ static NSString * const reuseIdentifier = @"Cell";
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         NSURL *channelURL = [self urlForChannel:channelName];
-        [SVProgressHUD dismiss];
+        
+        NSLog(@"Loading URL: %@...", channelURL);
         
         NSError *error;
         NSData *htmlData = [NSData dataWithContentsOfURL:channelURL options:0 error:&error];
@@ -142,30 +150,37 @@ static NSString * const reuseIdentifier = @"Cell";
                         NSURL *liveStreamURL = [NSURL URLWithString:secureString];
                         if (liveStreamURL) {
                             NSLog(@"URL: %@", liveStreamURL);
-                            
+
+                            [SVProgressHUD dismiss];
+
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 [self performSegueWithIdentifier:@"Show Channel" sender:liveStreamURL];
                             });
                             
                         } else {
+                            [SVProgressHUD dismiss];
                             [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Nem található a csatorna URL-je)"];
                         }
                     } else {
+                        [SVProgressHUD dismiss];
                         [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 03)"];
                         NSLog(@"count: %@, urlSplit: %@", @(urlSplit.count), urlSplit);
                     }
                 } else {
+                    [SVProgressHUD dismiss];
                     [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 02)"];
                     NSLog(@"count: %@, fileTagSplit: %@", @(fileTagSplit.count), fileTagSplit);
                 }
                 
             } else {
+                [SVProgressHUD dismiss];
                 [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 01)"];
                 NSLog(@"count: %@, sourceTagSplit: %@", @(sourceTagSplit.count), sourceTagSplit);
             }
             
             
         } else {
+            [SVProgressHUD dismiss];
             [self displayError:[NSString stringWithFormat:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: %@)", [error localizedDescription]]];
         }
     });

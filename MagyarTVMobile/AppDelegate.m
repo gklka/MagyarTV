@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+@import AVKit;
+
+
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
@@ -17,6 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    NSError *error;
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:&error];
+    
+    if (error) {
+        NSLog(@"Error configuring audio: %@", error);
+    }
+    
     return YES;
 }
 
