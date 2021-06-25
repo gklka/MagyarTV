@@ -85,6 +85,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dEl-It-6kp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <variation key="userInterfaceIdiom=mac" hidden="YES"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
