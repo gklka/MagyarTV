@@ -10,4 +10,8 @@
 
 @implementation MenuCell
 
+- (void)setHighlighted:(BOOL)highlighted {
+    self.alpha = highlighted ? 0.5 : 1.f;
+}
+
 @end

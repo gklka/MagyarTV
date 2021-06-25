@@ -15,14 +15,16 @@
 		470B39E61D317E2800613934 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E51D317E2800613934 /* MenuCell.m */; };
 		470B39E91D319B3500613934 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E81D319B3500613934 /* PlayerController.m */; };
 		473D1EC61F85275A00099580 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 473D1EC51F85275A00099580 /* AppDelegate.m */; };
-		473D1EC91F85275A00099580 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 473D1EC81F85275A00099580 /* MasterViewController.m */; };
-		473D1ECC1F85275A00099580 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 473D1ECB1F85275A00099580 /* DetailViewController.m */; };
 		473D1ECF1F85275A00099580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473D1ECD1F85275A00099580 /* Main.storyboard */; };
-		473D1ED11F85275A00099580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473D1ED01F85275A00099580 /* Assets.xcassets */; };
 		473D1ED41F85275A00099580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473D1ED21F85275A00099580 /* LaunchScreen.storyboard */; };
 		473D1ED71F85275A00099580 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 473D1ED61F85275A00099580 /* main.m */; };
+		476F5B982685DEE8008A15B7 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E21D317D2C00613934 /* MenuController.m */; };
+		476F5B992685E270008A15B7 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E51D317E2800613934 /* MenuCell.m */; };
+		476F5B9A2685E2B4008A15B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 470B39D91D3179D400613934 /* Assets.xcassets */; };
+		476F5B9B2685E3C6008A15B7 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E81D319B3500613934 /* PlayerController.m */; };
 		47AF26A01F42D5C0002F0350 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 47AF269F1F42D5C0002F0350 /* LICENSE */; };
 		7A06139A540BD49FCC1974A6 /* Pods_MagyarTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3368CE1239566E5E06BD6959 /* Pods_MagyarTV.framework */; };
+		C69A3EF7ADA13039D9CF1DFF /* Pods_MagyarTVMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE1BF82C501B1D0744635E /* Pods_MagyarTVMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,19 +58,17 @@
 		473D1EC21F85275A00099580 /* MagyarTVMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagyarTVMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		473D1EC41F85275A00099580 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		473D1EC51F85275A00099580 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		473D1EC71F85275A00099580 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		473D1EC81F85275A00099580 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		473D1ECA1F85275A00099580 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		473D1ECB1F85275A00099580 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		473D1ECE1F85275A00099580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		473D1ED01F85275A00099580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		473D1ED31F85275A00099580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		473D1ED51F85275A00099580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		473D1ED61F85275A00099580 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		47AF269D1F42D5BB002F0350 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		47AF269F1F42D5C0002F0350 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		50203E385AED982CF23B12A0 /* Pods-MagyarTVMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTVMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTVMobile/Pods-MagyarTVMobile.release.xcconfig"; sourceTree = "<group>"; };
+		55A23F3158976A4675886D7F /* Pods-MagyarTVMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTVMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTVMobile/Pods-MagyarTVMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		6A17137156EEC87894EF611D /* Pods-MagyarTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTV/Pods-MagyarTV.debug.xcconfig"; sourceTree = "<group>"; };
 		C5DF6A83A37A15CDE339691F /* Pods-MagyarTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTV/Pods-MagyarTV.release.xcconfig"; sourceTree = "<group>"; };
+		F7DE1BF82C501B1D0744635E /* Pods_MagyarTVMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagyarTVMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69A3EF7ADA13039D9CF1DFF /* Pods_MagyarTVMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				3368CE1239566E5E06BD6959 /* Pods_MagyarTV.framework */,
+				F7DE1BF82C501B1D0744635E /* Pods_MagyarTVMobile.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,12 +154,7 @@
 			children = (
 				473D1EC41F85275A00099580 /* AppDelegate.h */,
 				473D1EC51F85275A00099580 /* AppDelegate.m */,
-				473D1EC71F85275A00099580 /* MasterViewController.h */,
-				473D1EC81F85275A00099580 /* MasterViewController.m */,
-				473D1ECA1F85275A00099580 /* DetailViewController.h */,
-				473D1ECB1F85275A00099580 /* DetailViewController.m */,
 				473D1ECD1F85275A00099580 /* Main.storyboard */,
-				473D1ED01F85275A00099580 /* Assets.xcassets */,
 				473D1ED21F85275A00099580 /* LaunchScreen.storyboard */,
 				473D1ED51F85275A00099580 /* Info.plist */,
 				473D1ED61F85275A00099580 /* main.m */,
@@ -170,6 +167,8 @@
 			children = (
 				6A17137156EEC87894EF611D /* Pods-MagyarTV.debug.xcconfig */,
 				C5DF6A83A37A15CDE339691F /* Pods-MagyarTV.release.xcconfig */,
+				55A23F3158976A4675886D7F /* Pods-MagyarTVMobile.debug.xcconfig */,
+				50203E385AED982CF23B12A0 /* Pods-MagyarTVMobile.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -186,7 +185,6 @@
 				470B39C71D3179D400613934 /* Frameworks */,
 				470B39C81D3179D400613934 /* Resources */,
 				D613E3C1AA2AEBD50DD8C831 /* [CP] Embed Pods Frameworks */,
-				497E4A1B7B14C6FE58DEF6E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,10 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473D1EDA1F85275A00099580 /* Build configuration list for PBXNativeTarget "MagyarTVMobile" */;
 			buildPhases = (
+				95599027FAF483203173DF99 /* [CP] Check Pods Manifest.lock */,
 				473D1EBE1F85275A00099580 /* Sources */,
 				473D1EBF1F85275A00099580 /* Frameworks */,
 				473D1EC01F85275A00099580 /* Resources */,
 				473D1F051F85277F00099580 /* Embed Watch Content */,
+				67D3E09B78191013F1983062 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +221,7 @@
 		470B39C21D3179D400613934 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = GKSoftware;
 				TargetAttributes = {
 					470B39C91D3179D400613934 = {
@@ -240,6 +240,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -270,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				473D1ED41F85275A00099580 /* LaunchScreen.storyboard in Resources */,
-				473D1ED11F85275A00099580 /* Assets.xcassets in Resources */,
+				476F5B9A2685E2B4008A15B7 /* Assets.xcassets in Resources */,
 				473D1ECF1F85275A00099580 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,28 +285,56 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MagyarTV-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		497E4A1B7B14C6FE58DEF6E6 /* [CP] Copy Pods Resources */ = {
+		67D3E09B78191013F1983062 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagyarTVMobile/Pods-MagyarTVMobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD-iOS/SVProgressHUD.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagyarTV/Pods-MagyarTV-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagyarTVMobile/Pods-MagyarTVMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95599027FAF483203173DF99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MagyarTVMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D613E3C1AA2AEBD50DD8C831 /* [CP] Embed Pods Frameworks */ = {
@@ -314,13 +343,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagyarTV/Pods-MagyarTV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD-tvOS/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagyarTV/Pods-MagyarTV-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagyarTV/Pods-MagyarTV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -342,10 +374,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				473D1EC91F85275A00099580 /* MasterViewController.m in Sources */,
 				473D1EC61F85275A00099580 /* AppDelegate.m in Sources */,
+				476F5B992685E270008A15B7 /* MenuCell.m in Sources */,
+				476F5B982685DEE8008A15B7 /* MenuController.m in Sources */,
+				476F5B9B2685E3C6008A15B7 /* PlayerController.m in Sources */,
 				473D1ED71F85275A00099580 /* main.m in Sources */,
-				473D1ECC1F85275A00099580 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -402,6 +436,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -429,7 +464,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -437,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -456,6 +492,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -476,7 +513,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -513,6 +550,7 @@
 		};
 		473D1ED81F85275A00099580 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55A23F3158976A4675886D7F /* Pods-MagyarTVMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -532,7 +570,7 @@
 				DEVELOPMENT_TEAM = 9L2H2A796T;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MagyarTVMobile/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTVMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,6 +581,7 @@
 		};
 		473D1ED91F85275A00099580 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50203E385AED982CF23B12A0 /* Pods-MagyarTVMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -562,7 +601,7 @@
 				DEVELOPMENT_TEAM = 9L2H2A796T;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MagyarTVMobile/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTVMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
