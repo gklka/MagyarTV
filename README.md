@@ -4,12 +4,14 @@ Csináld magad magyar TV csatornák Apple TV 4-re, iOS-re és Mac-re ingyen!
 
 * M1
 * M2
-* M4 Sport
+* M4 Sport (2021 óta a reklámok miatt nem működik, pull request-et elfogadok)
+* M5
 * Duna TV
 * Duna World
 
 ![Menü](Doc/1.png)
 ![Belső képernyő](Doc/2.png)
+
 
 ## Telepítés
 
