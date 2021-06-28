@@ -50,6 +50,7 @@ static NSString * const reuseIdentifier = @"Cell";
         _logos = @[[UIImage imageNamed:@"m1logo"],
                    [UIImage imageNamed:@"m2logo"],
                    [UIImage imageNamed:@"m4logo"],
+                   [UIImage imageNamed:@"m5logo"],
                    [UIImage imageNamed:@"dunalogo"],
                    [UIImage imageNamed:@"dunaworldlogo"]];
     }
@@ -62,6 +63,7 @@ static NSString * const reuseIdentifier = @"Cell";
         _channelNames = @[@"mtv1",
                           @"mtv2",
                           @"mtv4",
+                          @"mtv5",
                           @"duna",
                           @"dunaworld"];
     }
@@ -77,7 +79,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    return self.channelNames.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

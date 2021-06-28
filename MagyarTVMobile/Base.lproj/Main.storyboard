@@ -46,6 +46,11 @@
                                         <constraint firstItem="bmK-8V-NCA" firstAttribute="top" secondItem="gBH-sr-IBK" secondAttribute="top" id="Fnu-6D-5lf"/>
                                         <constraint firstAttribute="bottom" secondItem="bmK-8V-NCA" secondAttribute="bottom" id="OUf-2W-vhy"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
