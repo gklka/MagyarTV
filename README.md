@@ -48,7 +48,11 @@ Mert az MTVA nem méltatott válaszra, az ő engedélyük nélkül pedig nem leh
 
 Mert nincs saját developer előfizetésem.
 
+### Nem működik a Duna World és az M4
+
+Sajnos ezek alatt eltörték a parsert. Szívesen fogadok kontribútorokat, akiknek van kedvük javítani!
+
 ### Valami nem megy, hol talállak meg?
 
-Nyiss itt ticketet vagy keress Twitteren: @gklka
+Nyiss itt ticketet vagy keress Mastodonon: @gklka
 
