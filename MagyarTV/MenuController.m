@@ -149,9 +149,8 @@ static NSString * const reuseIdentifier = @"Cell";
                         NSLog(@"URL before transforming: %@", urlSplit[0]);
                         
                         NSString *unescapedString = [urlSplit[0] stringByReplacingOccurrencesOfString:@"\\" withString:@""];
-                        NSString *secureString = [NSString stringWithFormat:@"https:%@", unescapedString];
                         
-                        NSURL *liveStreamURL = [NSURL URLWithString:secureString];
+                        NSURL *liveStreamURL = [NSURL URLWithString:unescapedString];
                         if (liveStreamURL) {
                             NSLog(@"URL: %@", liveStreamURL);
 
