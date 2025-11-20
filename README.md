@@ -16,23 +16,14 @@ Csináld magad magyar TV csatornák Apple TV 4-re, iOS-re és Mac-re ingyen!
 ## Telepítés
 
 1. [Töltsd le](https://github.com/gklka/MagyarTV/archive/master.zip)
-2. ha nincs fent, akkor telepítsd a CocoaPods-ot:
 
-	```
-	$ sudo gem install cocoapods
-	```
+2. Nyisd meg a `MagyarTV.xcodeproj` fájlt nyisd meg Xcode-dal
 
-3. lépj be Terminal-ban a project könyvtárába és telepítsd a pod-okat:
+3. Várd meg, amíg az Xcode befejezi a függőségek letöltését (a felső sáv mutatja mit csinál éppen)
 
-	```
-	$ pod install
-	```
+4. Állítsd be a MagyarTV → Targets / MagyarTV illetve Targets / MagyatTVMobile → Signing & Capabilities résznél a Team-ed és ajd egy egyedi Bundle Identifier-t az appnak (<tedomained>.MagyarTV pl)
 
-4. A fehér ikonos `MagyarTV.xcworkspace` fájlt nyisd meg Xcode-dal
-
-5. Állítsd be a MagyarTV → Targets / MagyarTV illetve Targets / MagyatTVMobile → Signing & Capabilities résznél a Team-ed és ajd egy egyedi Bundle Identifier-t az appnak (<tedomained>.MagyarTV pl)
-
-6. A play gomb mellett tudod telepíteni a csatlakoztatott készülékedre. Válaszd a "MagyarTVMobile"-t az iOS/Mac verzióhoz, a "MagyarTV"-t pedig tvOS-hez! Az Apple TV 4-et csatlakoztatni kell USB-C kábellel a géphez és az Xcode felső sávjában ki kell választani. Apple TV 4K és afelett vezeték nélkül, párosítás után tudod telepíteni. Ennek részleteire keress rá!
+5. A play gomb mellett tudod telepíteni a csatlakoztatott készülékedre. Válaszd a "MagyarTVMobile"-t az iOS/Mac verzióhoz, a "MagyarTV"-t pedig tvOS-hez! Az Apple TV 4-et csatlakoztatni kell USB-C kábellel a géphez és az Xcode felső sávjában ki kell választani. Apple TV 4K és afelett vezeték nélkül, párosítás után tudod telepíteni. Ennek részleteire keress rá!
 
 ## Tudnivalók
 
@@ -47,10 +38,6 @@ Mert az MTVA nem méltatott válaszra, az ő engedélyük nélkül pedig nem leh
 ### Miért nincs TestFlight?
 
 Mert nincs saját developer előfizetésem.
-
-### Nem működik a Duna World és az M4
-
-Sajnos ezek alatt eltörték a parsert. Szívesen fogadok kontribútorokat, akiknek van kedvük javítani!
 
 ### Valami nem megy, hol talállak meg?
 
