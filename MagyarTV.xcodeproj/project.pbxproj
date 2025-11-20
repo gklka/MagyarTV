@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,9 +24,9 @@
 		476F5B9B2685E3C6008A15B7 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 470B39E81D319B3500613934 /* PlayerController.m */; };
 		4770BDA42689CD7100958C39 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4770BDA32689CD7100958C39 /* SceneDelegate.m */; };
 		4770BDA52689CD7100958C39 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4770BDA32689CD7100958C39 /* SceneDelegate.m */; };
+		479A0AA92ECEF23E002DD787 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 479A0AA82ECEF23E002DD787 /* SVProgressHUD */; };
+		479A0AAB2ECEF25B002DD787 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 479A0AAA2ECEF25B002DD787 /* SVProgressHUD */; };
 		47AF26A01F42D5C0002F0350 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 47AF269F1F42D5C0002F0350 /* LICENSE */; };
-		7A06139A540BD49FCC1974A6 /* Pods_MagyarTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3368CE1239566E5E06BD6959 /* Pods_MagyarTV.framework */; };
-		C69A3EF7ADA13039D9CF1DFF /* Pods_MagyarTVMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DE1BF82C501B1D0744635E /* Pods_MagyarTVMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +43,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3368CE1239566E5E06BD6959 /* Pods_MagyarTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagyarTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		470B39CA1D3179D400613934 /* MagyarTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagyarTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		470B39CE1D3179D400613934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		470B39D01D3179D400613934 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,11 +68,6 @@
 		4770BDA32689CD7100958C39 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		47AF269D1F42D5BB002F0350 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		47AF269F1F42D5C0002F0350 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		50203E385AED982CF23B12A0 /* Pods-MagyarTVMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTVMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTVMobile/Pods-MagyarTVMobile.release.xcconfig"; sourceTree = "<group>"; };
-		55A23F3158976A4675886D7F /* Pods-MagyarTVMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTVMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTVMobile/Pods-MagyarTVMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		6A17137156EEC87894EF611D /* Pods-MagyarTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTV/Pods-MagyarTV.debug.xcconfig"; sourceTree = "<group>"; };
-		C5DF6A83A37A15CDE339691F /* Pods-MagyarTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagyarTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagyarTV/Pods-MagyarTV.release.xcconfig"; sourceTree = "<group>"; };
-		F7DE1BF82C501B1D0744635E /* Pods_MagyarTVMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagyarTVMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A06139A540BD49FCC1974A6 /* Pods_MagyarTV.framework in Frameworks */,
+				479A0AA92ECEF23E002DD787 /* SVProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,22 +83,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C69A3EF7ADA13039D9CF1DFF /* Pods_MagyarTVMobile.framework in Frameworks */,
+				479A0AAB2ECEF25B002DD787 /* SVProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		024AA9A91E968EAE06C7DD8D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3368CE1239566E5E06BD6959 /* Pods_MagyarTV.framework */,
-				F7DE1BF82C501B1D0744635E /* Pods_MagyarTVMobile.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		470B39C11D3179D400613934 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +98,6 @@
 				470B39CC1D3179D400613934 /* MagyarTV */,
 				473D1EC31F85275A00099580 /* MagyarTVMobile */,
 				470B39CB1D3179D400613934 /* Products */,
-				7ADF54B01FB30E6F784D4E4F /* Pods */,
-				024AA9A91E968EAE06C7DD8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,17 +153,6 @@
 			path = MagyarTVMobile;
 			sourceTree = "<group>";
 		};
-		7ADF54B01FB30E6F784D4E4F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6A17137156EEC87894EF611D /* Pods-MagyarTV.debug.xcconfig */,
-				C5DF6A83A37A15CDE339691F /* Pods-MagyarTV.release.xcconfig */,
-				55A23F3158976A4675886D7F /* Pods-MagyarTVMobile.debug.xcconfig */,
-				50203E385AED982CF23B12A0 /* Pods-MagyarTVMobile.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,11 +160,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 470B39DE1D3179D400613934 /* Build configuration list for PBXNativeTarget "MagyarTV" */;
 			buildPhases = (
-				1A919C256842EF8CEC45816D /* [CP] Check Pods Manifest.lock */,
 				470B39C61D3179D400613934 /* Sources */,
 				470B39C71D3179D400613934 /* Frameworks */,
 				470B39C81D3179D400613934 /* Resources */,
-				D613E3C1AA2AEBD50DD8C831 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,12 +177,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473D1EDA1F85275A00099580 /* Build configuration list for PBXNativeTarget "MagyarTVMobile" */;
 			buildPhases = (
-				95599027FAF483203173DF99 /* [CP] Check Pods Manifest.lock */,
 				473D1EBE1F85275A00099580 /* Sources */,
 				473D1EBF1F85275A00099580 /* Frameworks */,
 				473D1EC01F85275A00099580 /* Resources */,
 				473D1F051F85277F00099580 /* Embed Watch Content */,
-				67D3E09B78191013F1983062 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 470B39C11D3179D400613934;
+			packageReferences = (
+				479A0AA72ECEF23E002DD787 /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+			);
 			productRefGroup = 470B39CB1D3179D400613934 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,85 +256,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1A919C256842EF8CEC45816D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MagyarTV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67D3E09B78191013F1983062 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MagyarTVMobile/Pods-MagyarTVMobile-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD-iOS/SVProgressHUD.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagyarTVMobile/Pods-MagyarTVMobile-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95599027FAF483203173DF99 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MagyarTVMobile-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D613E3C1AA2AEBD50DD8C831 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MagyarTV/Pods-MagyarTV-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD-tvOS/SVProgressHUD.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagyarTV/Pods-MagyarTV-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		470B39C61D3179D400613934 /* Sources */ = {
@@ -530,14 +422,16 @@
 		};
 		470B39DF1D3179D400613934 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A17137156EEC87894EF611D /* Pods-MagyarTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9L2H2A796T;
 				INFOPLIST_FILE = MagyarTV/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -545,14 +439,16 @@
 		};
 		470B39E01D3179D400613934 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5DF6A83A37A15CDE339691F /* Pods-MagyarTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9L2H2A796T;
 				INFOPLIST_FILE = MagyarTV/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -560,7 +456,6 @@
 		};
 		473D1ED81F85275A00099580 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55A23F3158976A4675886D7F /* Pods-MagyarTVMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -583,7 +478,10 @@
 				INFOPLIST_FILE = MagyarTVMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTVMobile;
 				PRODUCT_NAME = MagyarTV;
 				SDKROOT = iphoneos;
@@ -594,7 +492,6 @@
 		};
 		473D1ED91F85275A00099580 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50203E385AED982CF23B12A0 /* Pods-MagyarTVMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -617,7 +514,10 @@
 				INFOPLIST_FILE = MagyarTVMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTVMobile;
 				PRODUCT_NAME = MagyarTV;
 				SDKROOT = iphoneos;
@@ -657,6 +557,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		479A0AA72ECEF23E002DD787 /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		479A0AA82ECEF23E002DD787 /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 479A0AA72ECEF23E002DD787 /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
+		479A0AAA2ECEF25B002DD787 /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 479A0AA72ECEF23E002DD787 /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 470B39C21D3179D400613934 /* Project object */;
 }
