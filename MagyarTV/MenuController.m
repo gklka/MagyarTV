@@ -24,6 +24,7 @@
 @implementation MenuController
 
 static NSString * const reuseIdentifier = @"Cell";
+static NSString * const playerReferer = @"https://player.mediaklikk.hu/playernew/";
 
 #pragma mark - Lifecycle
 
@@ -122,71 +123,88 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)openLiveStreamForChannel:(NSString *)channelName {
     [SVProgressHUD show];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    
+    NSURL *channelURL = [self urlForChannel:channelName];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:channelURL];
+    [request setValue:playerReferer forHTTPHeaderField:@"Referer"];
+    
+    NSLog(@"Loading URL: %@...", channelURL);
+    
+    __weak typeof(self) weakSelf = self;
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
         
-        NSURL *channelURL = [self urlForChannel:channelName];
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        if (error || httpResponse.statusCode >= 400 || !data) {
+            NSString *reason = [error localizedDescription] ?: [NSString stringWithFormat:@"HTTP %@", @(httpResponse.statusCode)];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+                [strongSelf displayError:[NSString stringWithFormat:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: %@)", reason]];
+            });
+            return;
+        }
         
-        NSLog(@"Loading URL: %@...", channelURL);
+        NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"HTML: %@", html);
         
-        NSError *error;
-        NSData *htmlData = [NSData dataWithContentsOfURL:channelURL options:0 error:&error];
-        if (htmlData) {
-            NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
+        NSArray *sourceTagSplit = [html componentsSeparatedByString:@"\"playlist\":"];
+        if (sourceTagSplit.count > 1) {
             
-            NSLog(@"HTML: %@", html);
-            
-            NSArray *sourceTagSplit = [html componentsSeparatedByString:@"\"playlist\":"];
-            if (sourceTagSplit.count > 1) {
+            NSArray *fileTagSplit = [sourceTagSplit[1] componentsSeparatedByString:@"\"file\": \""];
+            if (fileTagSplit.count > 1) {
                 
-                NSArray *fileTagSplit = [sourceTagSplit[1] componentsSeparatedByString:@"\"file\": \""];
-                if (fileTagSplit.count > 1) {
+                NSLog(@"%@", fileTagSplit[1]);
+            
+                NSArray *urlSplit = [fileTagSplit[1] componentsSeparatedByString:@"\",\n"];
+                if (urlSplit.count > 1) {
                     
-                    NSLog(@"%@", fileTagSplit[1]);
-                
-                    NSArray *urlSplit = [fileTagSplit[1] componentsSeparatedByString:@"\",\n"];
-                    if (urlSplit.count > 1) {
+                    NSLog(@"URL before transforming: %@", urlSplit[0]);
+                    
+                    NSString *unescapedString = [urlSplit[0] stringByReplacingOccurrencesOfString:@"\\" withString:@""];
+                    
+                    NSURL *liveStreamURL = [NSURL URLWithString:unescapedString];
+                    if (liveStreamURL) {
+                        NSLog(@"URL: %@", liveStreamURL);
                         
-                        NSLog(@"URL before transforming: %@", urlSplit[0]);
-                        
-                        NSString *unescapedString = [urlSplit[0] stringByReplacingOccurrencesOfString:@"\\" withString:@""];
-                        
-                        NSURL *liveStreamURL = [NSURL URLWithString:unescapedString];
-                        if (liveStreamURL) {
-                            NSLog(@"URL: %@", liveStreamURL);
-
+                        dispatch_async(dispatch_get_main_queue(), ^{
                             [SVProgressHUD dismiss];
-
-                            dispatch_async(dispatch_get_main_queue(), ^{
-                                [self performSegueWithIdentifier:@"Show Channel" sender:liveStreamURL];
-                            });
-                            
-                        } else {
-                            [SVProgressHUD dismiss];
-                            [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Nem található a csatorna URL-je)"];
-                        }
+                            [strongSelf performSegueWithIdentifier:@"Show Channel" sender:liveStreamURL];
+                        });
+                        
                     } else {
-                        [SVProgressHUD dismiss];
-                        [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 03)"];
-                        NSLog(@"count: %@, urlSplit: %@", @(urlSplit.count), urlSplit);
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [SVProgressHUD dismiss];
+                            [strongSelf displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Nem található a csatorna URL-je)"];
+                        });
                     }
                 } else {
-                    [SVProgressHUD dismiss];
-                    [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 02)"];
-                    NSLog(@"count: %@, fileTagSplit: %@", @(fileTagSplit.count), fileTagSplit);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [SVProgressHUD dismiss];
+                        [strongSelf displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 03)"];
+                    });
+                    NSLog(@"count: %@, urlSplit: %@", @(urlSplit.count), urlSplit);
                 }
-                
             } else {
-                [SVProgressHUD dismiss];
-                [self displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 01)"];
-                NSLog(@"count: %@, sourceTagSplit: %@", @(sourceTagSplit.count), sourceTagSplit);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [SVProgressHUD dismiss];
+                    [strongSelf displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 02)"];
+                });
+                NSLog(@"count: %@, fileTagSplit: %@", @(fileTagSplit.count), fileTagSplit);
             }
             
-            
         } else {
-            [SVProgressHUD dismiss];
-            [self displayError:[NSString stringWithFormat:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: %@)", [error localizedDescription]]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+                [strongSelf displayError:@"A csatorna nem tötlhető be. Próbálkozz később!\n\n(A hiba oka: Hibás HTML 01)"];
+            });
+            NSLog(@"count: %@, sourceTagSplit: %@", @(sourceTagSplit.count), sourceTagSplit);
         }
-    });
+    }];
+    
+    [task resume];
 }
 
 @end
