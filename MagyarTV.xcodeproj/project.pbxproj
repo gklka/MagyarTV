@@ -27,6 +27,13 @@
 		479A0AA92ECEF23E002DD787 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 479A0AA82ECEF23E002DD787 /* SVProgressHUD */; };
 		479A0AAB2ECEF25B002DD787 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 479A0AAA2ECEF25B002DD787 /* SVProgressHUD */; };
 		47AF26A01F42D5C0002F0350 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 47AF269F1F42D5C0002F0350 /* LICENSE */; };
+		47FA000000000000000000B1 /* MagyarTVWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FA000000000000000000A1 /* MagyarTVWatchApp.swift */; };
+		47FA000000000000000000B2 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FA000000000000000000A2 /* Channel.swift */; };
+		47FA000000000000000000B3 /* StreamResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FA000000000000000000A3 /* StreamResolver.swift */; };
+		47FA000000000000000000B4 /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FA000000000000000000A4 /* ChannelListView.swift */; };
+		47FA000000000000000000B5 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FA000000000000000000A5 /* PlayerView.swift */; };
+		47FA000000000000000000B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FA000000000000000000A6 /* Assets.xcassets */; };
+		47FA000000000000000000B7 /* MagyarTVWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 47FA000000000000000000A0 /* MagyarTVWatch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +43,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				47FA000000000000000000B7 /* MagyarTVWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +76,14 @@
 		4770BDA32689CD7100958C39 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		47AF269D1F42D5BB002F0350 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		47AF269F1F42D5C0002F0350 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		47FA000000000000000000A0 /* MagyarTVWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagyarTVWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47FA000000000000000000A1 /* MagyarTVWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagyarTVWatchApp.swift; sourceTree = "<group>"; };
+		47FA000000000000000000A2 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		47FA000000000000000000A3 /* StreamResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamResolver.swift; sourceTree = "<group>"; };
+		47FA000000000000000000A4 /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
+		47FA000000000000000000A5 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		47FA000000000000000000A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47FA000000000000000000A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47FA000000000000000000D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,6 +120,7 @@
 				47AF269F1F42D5C0002F0350 /* LICENSE */,
 				470B39CC1D3179D400613934 /* MagyarTV */,
 				473D1EC31F85275A00099580 /* MagyarTVMobile */,
+				47FA000000000000000000C0 /* MagyarTVWatch */,
 				470B39CB1D3179D400613934 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +130,7 @@
 			children = (
 				470B39CA1D3179D400613934 /* MagyarTV.app */,
 				473D1EC21F85275A00099580 /* MagyarTV.app */,
+				47FA000000000000000000A0 /* MagyarTVWatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +178,20 @@
 			path = MagyarTVMobile;
 			sourceTree = "<group>";
 		};
+		47FA000000000000000000C0 /* MagyarTVWatch */ = {
+			isa = PBXGroup;
+			children = (
+				47FA000000000000000000A1 /* MagyarTVWatchApp.swift */,
+				47FA000000000000000000A2 /* Channel.swift */,
+				47FA000000000000000000A3 /* StreamResolver.swift */,
+				47FA000000000000000000A4 /* ChannelListView.swift */,
+				47FA000000000000000000A5 /* PlayerView.swift */,
+				47FA000000000000000000A6 /* Assets.xcassets */,
+				47FA000000000000000000A7 /* Info.plist */,
+			);
+			path = MagyarTVWatch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,10 +224,28 @@
 			buildRules = (
 			);
 			dependencies = (
+				47FA000000000000000000D5 /* PBXTargetDependency */,
 			);
 			name = MagyarTVMobile;
 			productName = MagyarTVMobile;
 			productReference = 473D1EC21F85275A00099580 /* MagyarTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47FA000000000000000000D0 /* MagyarTVWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47FA000000000000000000E3 /* Build configuration list for PBXNativeTarget "MagyarTVWatch" */;
+			buildPhases = (
+				47FA000000000000000000D1 /* Sources */,
+				47FA000000000000000000D2 /* Frameworks */,
+				47FA000000000000000000D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagyarTVWatch;
+			productName = MagyarTVWatch;
+			productReference = 47FA000000000000000000A0 /* MagyarTVWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,11 +266,16 @@
 						DevelopmentTeam = 9L2H2A796T;
 						ProvisioningStyle = Automatic;
 					};
+					47FA000000000000000000D0 = {
+						CreatedOnToolsVersion = 26.6;
+						DevelopmentTeam = 9L2H2A796T;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 470B39C51D3179D400613934 /* Build configuration list for PBXProject "MagyarTV" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -230,6 +292,7 @@
 			targets = (
 				470B39C91D3179D400613934 /* MagyarTV */,
 				473D1EC11F85275A00099580 /* MagyarTVMobile */,
+				47FA000000000000000000D0 /* MagyarTVWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +315,14 @@
 				473D1ED41F85275A00099580 /* LaunchScreen.storyboard in Resources */,
 				476F5B9A2685E2B4008A15B7 /* Assets.xcassets in Resources */,
 				473D1ECF1F85275A00099580 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47FA000000000000000000D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47FA000000000000000000B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +355,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47FA000000000000000000D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47FA000000000000000000B1 /* MagyarTVWatchApp.swift in Sources */,
+				47FA000000000000000000B2 /* Channel.swift in Sources */,
+				47FA000000000000000000B3 /* StreamResolver.swift in Sources */,
+				47FA000000000000000000B4 /* ChannelListView.swift in Sources */,
+				47FA000000000000000000B5 /* PlayerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		47FA000000000000000000D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 470B39C21D3179D400613934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47FA000000000000000000D0;
+			remoteInfo = MagyarTVWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		47FA000000000000000000D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 47FA000000000000000000D0 /* MagyarTVWatch */;
+			targetProxy = 47FA000000000000000000D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		470B39D61D3179D400613934 /* Main.storyboard */ = {
@@ -526,6 +628,66 @@
 			};
 			name = Release;
 		};
+		47FA000000000000000000E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L2H2A796T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MagyarTVWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MagyarTV;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTVMobile.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		47FA000000000000000000E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L2H2A796T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MagyarTVWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MagyarTV;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.lka.gk.MagyarTVMobile.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -552,6 +714,15 @@
 			buildConfigurations = (
 				473D1ED81F85275A00099580 /* Debug */,
 				473D1ED91F85275A00099580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47FA000000000000000000E3 /* Build configuration list for PBXNativeTarget "MagyarTVWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47FA000000000000000000E1 /* Debug */,
+				47FA000000000000000000E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
